@@ -10,7 +10,9 @@
 #include "util/misc.h"
 #include "stub/server.h"
 
+WARN_IGNORE__REGISTER()
 #include <udis86.h>
+WARN_RESTORE()
 
 #include <regex>
 

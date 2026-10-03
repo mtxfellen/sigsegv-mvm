@@ -1,5 +1,7 @@
 #include "mod.h"
+WARN_IGNORE__REORDER()
 #include "vscript/ivscript.h"
+WARN_RESTORE()
 #include "mem/protect.h"
 #include "link/link.h"
 #include "util/admin.h"

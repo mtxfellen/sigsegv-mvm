@@ -19,7 +19,9 @@
 #include "version.h"
 #include "convar_restore.h"
 #ifdef SE_IS_TF2
+WARN_IGNORE__REORDER()
 #include "vscript/ivscript.h"
+WARN_RESTORE()
 #endif
 //#include "entity.h"
 

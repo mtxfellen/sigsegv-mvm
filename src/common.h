@@ -76,6 +76,18 @@
 	#define WARN_IGNORE__CLASS_MEMACCESS()
 #endif
 
+#if defined __GNUC__ || defined __clang__
+#define WARN_IGNORE__REGISTER() WARN_IGNORE("-Wregister")
+#else
+#define WARN_IGNORE__REGISTER()
+#endif
+
+#if defined __GNUC__ || defined __clang__
+#define WARN_IGNORE__DEPRECATED_ENUM_ENUM_CONVERSION() WARN_IGNORE("-Wdeprecated-enum-enum-conversion")
+#else
+#define WARN_IGNORE__DEPRECATED_ENUM_ENUM_CONVERSION()
+#endif
+
 #if defined SE_IS_TF2 || defined SE_IS_CSS || defined SE_IS_SDK2013
 	#define SE_IS_SDK2013_BASED
 #endif
@@ -419,9 +431,13 @@ WARN_RESTORE()
 #include <bitbuf.h>
 #include <eiface.h>
 #include "sdk2013/utlsymbol.h"
+WARN_IGNORE__REORDER()
 #include <materialsystem/imaterialsystem.h>
+WARN_RESTORE()
 #include <materialsystem/imaterial.h>
+WARN_IGNORE__REORDER()
 #include <toolframework/itoolentity.h>
+WARN_RESTORE()
 #include <datamap.h>
 #include <ispatialpartition.h>
 #include <random.h>

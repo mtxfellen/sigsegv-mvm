@@ -1,5 +1,7 @@
 #include "mod.h"
+WARN_IGNORE__REORDER()
 #include "vscript/ivscript.h"
+WARN_RESTORE()
 #include "util/scope.h"
 
 namespace Mod::Util::VScript_Fix_Duplicate_Print

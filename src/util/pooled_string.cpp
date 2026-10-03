@@ -1,7 +1,10 @@
 #include "util/pooled_string.h"
 #include "util/misc.h"
 #include "link/link.h"
+WARN_IGNORE__DEPRECATED_ENUM_ENUM_CONVERSION()
+WARN_IGNORE__SIGN_COMPARE()
 #include "utlhashtable.h"
+WARN_RESTORE()
 #include "mod.h"
 
 #ifdef SE_TF2

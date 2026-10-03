@@ -4,7 +4,9 @@
 #include "mem/wrapper.h"
 #include "mem/func_copy.h"
 
+WARN_IGNORE__REGISTER()
 #include <udis86.h>
+WARN_RESTORE()
 
 /* get number of instruction operands */
 static unsigned int UD86_num_operands(struct ud *ud)
