@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd build/release
-ambuild
+ambuild 1> /dev/null
 
 pushd package
 	(
